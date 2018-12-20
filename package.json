@@ -5,6 +5,7 @@
   "scripts": {
     "electron": "electron .",
     "electron-rebuild": "electron-rebuild",
+    "postinstall": "electron-builder install-app-deps",
     "start": "webpack --mode development",
     "build": "webpack --mode production",
     "pack": "electron-builder --dir",
