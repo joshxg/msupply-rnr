@@ -36,6 +36,7 @@
     "appId": "rnr",
     "files": [
       "main.js",
+      "server.js",
       "build/*"
     ],
     "mac": {
