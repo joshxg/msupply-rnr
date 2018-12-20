@@ -1,0 +1,16 @@
+# Build
+build/
+
+# Dist
+dist/
+
+# Yarn
+yarn.lock
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+node_modules/
+
+# OS X
+.DS_STORE
