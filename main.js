@@ -6,7 +6,7 @@ function createWindow() {
   win = new BrowserWindow({ width: 800, height: 600 });
   win.loadFile("build/index.html");
 
-  server([app.getAppPath("userData")]);
+  server(app.getPath("userData"));
 }
 
 app.on("ready", createWindow);
