@@ -7,7 +7,9 @@
     "start": "webpack --mode development",
     "build": "webpack --mode production",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "make": "yarn build && yarn dist",
+    "clean": "rm -rf build dist"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
