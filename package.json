@@ -41,6 +41,9 @@
     ],
     "mac": {
       "category": "rnr"
+    },
+    "win": {
+      "target": "nsis"
     }
   }
 }
