@@ -6,7 +6,7 @@ export default class Window extends Component {
     this.state = { msg: "Hello Window!" };
   }
 
-  request() {
+  request = () => {
     require("http").get({ hostname: "localhost", port: 9615 }, res => {
       let serverMsg = "";
       res.on("data", data => {
@@ -16,7 +16,7 @@ export default class Window extends Component {
         this.setState({ msg: serverMsg });
       });
     });
-  }
+  };
 
   render() {
     return (
