@@ -11,6 +11,17 @@ const server = appPath => {
     db.run("INSERT INTO test VALUES ('Hello SQL!');");
   });
 
+  if (process.env.ELECTRON_START_URL) {
+    app.use(function(req, res, next) {
+      res.header("Access-Control-Allow-Origin", "*");
+      res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+      );
+      next();
+    });
+  }
+
   app.get("/", (req, res) => {
     console.log("Server received a request...");
     db.get("SELECT * FROM test;", (err, row) => {

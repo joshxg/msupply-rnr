@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "electron": "electron .",
+    "electron": "ELECTRON_START_URL=http://0.0.0.0:8080 electron .",
     "electron-rebuild": "electron-rebuild",
     "postinstall": "electron-builder install-app-deps",
     "start": "webpack --mode development",
@@ -11,7 +11,8 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "make": "yarn build && yarn dist",
-    "clean": "rm -rf build dist"
+    "clean": "rm -rf build dist",
+    "dev": "webpack-dev-server"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -22,9 +23,11 @@
     "electron": "^3.0.13",
     "electron-builder": "^20.38.4",
     "electron-rebuild": "^1.8.2",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.28.0",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.13"
   },
   "dependencies": {
     "express": "^4.16.4",
